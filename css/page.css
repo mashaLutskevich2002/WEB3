@@ -1,0 +1,237 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+section{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+
+.about_table th{
+	color: white;
+	background-color: #424242;
+}
+.about_table td{
+	background-color: #E6E6E6;
+}
+
+b+i{
+	color: blue;
+}
+
+i+strong{
+	color: #31B404;
+}
+
+p>em{
+	color: #610B5E;
+	font-weight: 600; 
+}
+
+ul{
+	list-style-image: linear-gradient(#FF7A2F 0,#FF7A2F 50%, #FFB214 50% )
+}
+ul>li{
+	color: #610B5E;
+}
+
+
+.header-nav{
+	display: flex;
+	height: 100px;
+	width: 100%;
+	background-color: #2E2E2E;
+	align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-around;
+	flex: 1 1 auto;
+	
+}
+
+.container{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-around;
+    flex: 1 1 auto;
+    height: 100%;
+}
+
+.container-header{
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    height: 100%;
+    flex-direction: column;
+}
+
+.header{
+	height: 800px;
+	width: 100%;
+	background-image: url("../img/header.jpg");
+}
+
+.logo{
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+}
+
+.logo-img{
+	background-image: url("../img/logo.png");
+	width: 80px;
+	height: 80px;
+	background-size: cover;
+}
+
+.nav-element{
+	display: flex;
+	justify-content: space-between;
+	width: 600px;
+}
+
+.nav-el{
+	text-decoration: none;
+	font-size: 18px;
+	
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	color: white;
+}
+
+.logo-text{
+	padding-left: 15px
+}
+
+.logo-text__style{
+	color: white;
+	font-family: 'Rubik', sans-serif;
+	font-size: 23px;
+}
+
+.header-main{
+	height: 600px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	align-content: space-between;
+	
+	flex-direction: column;
+}
+
+.header-main__tittle{
+	text-align: center;
+}
+
+.header-main__text{
+	font-family: 'Roboto Slab', serif;
+font-size: 40px;
+}
+
+.header-main__button[target="_self"]{
+	font-family: 'Roboto Slab', serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	width: 250px;
+	height: 55px;
+	background-color: #21F08F;
+	border-radius: 30px;
+	color: black;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+
+
+
+.icons{
+	
+	font-size: 23px;
+
+	
+}
+.icons_a{
+	margin-right: 50px;
+	color: white;
+}
+.aboutForm{
+	
+    margin-top: 50px;
+    text-align: center;
+}
+.aboutFormInput{
+
+    width: 130px;
+    height: 20px;
+
+    border-radius: 10px;
+    border-style: solid;
+}
+.aboutButton{
+
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    
+}
+
+.aboutButton:hover{
+    width: 133px;
+    height: 23px;
+    background-color: #F8F8FF;
+    color: black;
+    border-style: dotted;
+    transition: 0.5s;
+
+
+}
+
+
+
+
+#p_table{
+    text-align: center;
+    font-family: "Source Sans Pro" ;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+
+
+.about_table{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-spacing: 1px;
+
+}
+.sofa{
+	float: left;
+	width: 200px;
+}
+.sofa1{
+	float: right;
+	width: 250px;
+}
+
+.admin{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}

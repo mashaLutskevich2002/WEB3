@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="css/page.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+</head>
+<body>
+	<header>
+    <div class="header-nav">
+       <div class="container">
+        <div class="logo">
+            <div class="logo-img" onclick="document.location='page.php'">
+                
+            </div>
+            <div class="logo-text">
+                <p class="logo-text__style">DIMARO</p>
+            </div>
+        </div>
+        <div class="nav-element">
+            <a class="nav-el" href="sofa.html">Диваны</a>
+            <a class="nav-el" href="chair.html">Стулья</a>
+            <a class="nav-el" href="table.html">Столы</a>
+            <a class="nav-el" href="armchair.html">Кресла</a>
+            <a class="nav-el" href="cupboard.html">Шкафы</a>
+        </div>
+        <div class="icons">
+           <a href="authorization.html" class="icons_a" ><i class="fas fa-user-alt"></i></a> 
+           <a href="" class="icons_a"> <i class="fas fa-shopping-basket"></i></a>
+        </div>
+
+
+    </div> 
+    </div>
+    
+    </div>
+</header>
+
+<section >
+
+
+    <div id="welcome1">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" placeholder="Введите информацию">
+        <button id="send">Отправить</button>
+      </div>
+    
+    <script>
+    //после загрузки DOM-дерева страницы
+    console.log(true);
+    document.addEventListener("DOMContentLoaded",function() {
+      //получить кнопку
+      var mybutton = document.getElementById('send');
+      //подписаться на событие click по кнопке и назначить обработчик, который будет выполнять действия, указанные в безымянной функции
+      mybutton.addEventListener("click", function(){
+        //1. Сбор данных, необходимых для выполнения запроса на сервере
+        var name = document.getElementById('name').value;
+        localStorage.setItem('name', name)
+        //Подготовка данных для отправки на сервер
+        //т.е. кодирование с помощью метода encodeURIComponent
+        name = 'nameUser=' + encodeURIComponent(name);
+        // 2. Создание переменной request
+        var request = new XMLHttpRequest();
+        // 3. Настройка запроса
+        request.open('POST','test1.php',true);
+        // 4. Подписка на событие onreadystatechange и обработка его с помощью анонимной функции
+        request.addEventListener('readystatechange', function() {
+          //если запрос пришёл и статус запроса 200 (OK)
+          if ((request.readyState==4) && (request.status==200)) {
+            // например, выведем объект XHR в консоль браузера
+            console.log(request);
+            // и ответ (текст), пришедший с сервера в окне alert
+            console.log(request.responseText);
+            // получить элемент c id = welcome
+            var welcome = document.getElementById('welcome1');
+            var welcome1 = document.getElementById('welcome');
+            // заменить содержимое элемента ответом, пришедшим с сервера
+            welcome1.innerHTML = request.responseText ;
+          }
+        });
+        // Устанавливаем заголовок Content-Type(обязательно для метода POST). Он предназначен для указания кодировки, с помощью которой зашифрован запрос. Это необходимо для того, чтобы сервер знал как его раскодировать.
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+        // 5. Отправка запроса на сервер. В качестве параметра указываем данные, которые необходимо передать (необходимо для POST)
+        request.send(name);
+      });
+    });
+    </script>
+
+
+
+  <h1>  Диван-кровать: описание и особенности </h1>
+  <img src="img/sofa.jpg" alt="sofa" class="sofa">
+
+<p>
+Большая часть населения, <em>тем более в маленьких городах, живут в небольших квартирах</em>, где выделить целую комнату для полноценного отдыха на большой двуспальной кровати не всегда представляется возможным. Прекрасной альтернативой является диван-кровать, вмещающий в себя несколько функций. В дневное время служит местом, где можно посидеть, посмотреть телевизор или почитать книгу, рассадить несколько гостей, а ночью в разложенном состоянии представляет собой идеальное место для полноценного отдыха.</p>
+
+<h2>Преимущества дивана-кровати</h2>
+<h4>Стоит изучить, какие существуют основные преимущества у такой мебели, и почему она в последнее время набирает все больше популярности.</h4>
+<ul>
+    <li>Диван-кровать <b>экономит</b> место в комнате, так как на дневное <i>время суток</i> его можно сложить.</li>
+    <li>Простая конструкция изделия. Раскладывается эта <i>мебель</i> <strong>быстро</strong> и без проблем.</li>
+    <li>Нет необходимости докупать матрас (если вас не интересует топпер), такой диван уже оборудован полноценным спальным местом.</li>
+</ul>
+
+
+
+<p>Также стоит отметить, <em>что при правильном выборе механизма, наполнителя и обивки</em>, диван прослужит своему владельцу долгое время. Как же правильно сделать выбор? Давайте разбираться.</p>
+  <img src="img/sofa1.jpg" alt="sofa" class="sofa1">
+<h2>Базовые знания о диване</h2>
+<h4>Перед покупкой такой важного и нужного предмета мебели следует подумать, для каких целей он приобретается:</h4>
+ <ul>
+     <li>для постоянного использования в качестве кровати;</li>
+     <li>как гостевой вариант;</li>
+     <li>будет ли в нем хранится постельное белье.</li>
+ </ul>   
+ <div id='welcome'> </div>
+
+
+
+
+</section>
+
+
+
+
+</body>
+</html>
